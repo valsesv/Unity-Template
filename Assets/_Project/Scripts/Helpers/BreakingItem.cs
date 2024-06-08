@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Scripts.Helpers
+namespace valsesv._Project.Scripts.Helpers
 {
     public class BreakingItem : MonoBehaviour
     {
@@ -16,7 +16,7 @@ namespace _Scripts.Helpers
         {
             EnableGravity(true);
         }
-        
+
         private void EnableGravity(bool isEnabled)
         {
             wholeObject.SetActive(!isEnabled);

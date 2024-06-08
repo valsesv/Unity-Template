@@ -1,28 +1,21 @@
 using System;
 using UnityEngine;
 
-namespace _Scripts.Managers.MoneyManagement
+namespace valsesv._Project.Scripts.Managers.MoneyManagement
 {
     public class MoneyWallet : MonoBehaviour
     {
-        #region Variables
         [SerializeField] private float moneyCount;
-        
-        private const string SaveKey = "Money";
 
-        public float MoneyCount => moneyCount;
-        
+        private const string SaveKey = "Money";
         public event Action MoneyCountChanged;
-        #endregion
-        
-        #region Monobehaviour Callbacks
+        public float MoneyCount => moneyCount;
+
         private void Start()
         {
             Load();
         }
-        #endregion
 
-        #region Add/Get
         public void Add(float addAmount)
         {
             moneyCount += addAmount;
@@ -33,14 +26,9 @@ namespace _Scripts.Managers.MoneyManagement
 
         public void Get(int getAmount)
         {
-            moneyCount -= getAmount;
-            MoneyCountChanged?.Invoke();
-
-            Save();
+            Add(-getAmount);
         }
-        #endregion
-        
-        #region Save/Load
+
         private void Save()
         {
             PlayerPrefs.SetFloat(SaveKey, moneyCount);
@@ -49,9 +37,8 @@ namespace _Scripts.Managers.MoneyManagement
         private void Load()
         {
             moneyCount = PlayerPrefs.GetFloat(SaveKey, moneyCount);
-            
+
             MoneyCountChanged?.Invoke();
         }
-        #endregion
     }
 }

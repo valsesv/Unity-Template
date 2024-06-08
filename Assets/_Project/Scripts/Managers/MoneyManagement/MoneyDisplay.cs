@@ -1,29 +1,25 @@
-using _Scripts.Helpers;
 using TMPro;
 using UnityEngine;
+using valsesv._Project.Scripts.Helpers;
 using Zenject;
 
-namespace _Scripts.Managers.MoneyManagement
+namespace valsesv._Project.Scripts.Managers.MoneyManagement
 {
     public class MoneyDisplay : MonoBehaviour
     {
-        #region Variables
         [SerializeField] private TextMeshProUGUI moneyText;
-        
+
         [Inject] private MoneyWallet _moneyWallet;
-        #endregion
-        
-        #region Monobehaviour Callbacks
+
         private void Start()
         {
             _moneyWallet.MoneyCountChanged += Display;
             Display();
         }
-        #endregion
-        
+
         private void Display()
         {
-            moneyText.text = TextFormatter.MoneyText(_moneyWallet.MoneyCount);
+            moneyText.text = TextFormatter.NumberWithLetter(_moneyWallet.MoneyCount);
         }
     }
 }

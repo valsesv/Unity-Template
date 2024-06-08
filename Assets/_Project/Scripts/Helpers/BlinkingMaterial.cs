@@ -1,14 +1,12 @@
-﻿using _Scripts.Managers;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
-using Zenject;
 
-namespace _Scripts.Helpers
+namespace valsesv._Project.Scripts.Helpers
 {
     public class BlinkingMaterial : MonoBehaviour
     {
         [SerializeField] private Material transparentMaterial;
-    
+
         [SerializeField, Range(0f, 1f)] private float maxAlpha = 1f;
         [SerializeField, Range(0f, 1f)] private float minAlpha = 0.5f;
         [SerializeField] private float blinkDuration = 0.5f;
@@ -23,7 +21,7 @@ namespace _Scripts.Helpers
         }
 
         private void Blink()
-        { 
+        {
             var startColor = transparentMaterial.color;
             startColor.a = maxAlpha;
             transparentMaterial.color = startColor;

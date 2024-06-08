@@ -1,25 +1,44 @@
-﻿namespace _Scripts.Helpers
+﻿namespace valsesv._Project.Scripts.Helpers
 {
     public static class TextFormatter
     {
-        private const string Format = "F1";
-        
-        public static string MoneyText(float value)
+        private const string Format = "F2";
+
+        public static string NumberWithLetter(double value)
         {
-            var result = value.ToString("F0");
-            if (value >= 1e9)
+            return value switch
             {
-                result = (value / 1e9).ToString(Format) + 'B';
-            }
-            else if (value >= 1e6)
+                < 1e4 => value.ToString("F0"),
+                >= 1e14 => GetAlphabetNumber(value),
+                >= 1e10 => (value / 1e9).ToString(Format) + 'B',
+                >= 1e7 => (value / 1e6).ToString(Format) + 'M',
+                >= 1e4 => (value / 1e3).ToString(Format) + 'K',
+                _ => null
+            };
+        }
+
+        private static string GetAlphabetNumber(double value)
+        {
+            char? letter1 = null;
+            var letter2 = 'a';
+            while (value > 1e4)
             {
-                result = (value / 1e6).ToString(Format) + 'M';
+                value /= 1000;
+                if (letter2 == 'z')
+                {
+                    letter2 = 'a';
+                    if (letter1 == null)
+                    {
+                        letter1 = 'a';
+                    }
+                    else
+                    {
+                        letter1++;
+                    }
+                }
+                letter2++;
             }
-            else if (value >= 1e4)
-            {
-                result = (value / 1e3).ToString(Format) + 'k';
-            }
-            return result;
+            return value.ToString(Format) + letter1 + letter2;
         }
     }
 }
