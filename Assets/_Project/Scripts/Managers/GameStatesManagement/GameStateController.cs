@@ -1,8 +1,6 @@
 ﻿using System;
 using UnityEngine;
 using valsesv._Project.Scripts.Interfaces;
-using valsesv._Project.Scripts.Managers.ScenesManagement;
-using Zenject;
 
 namespace valsesv._Project.Scripts.Managers.GameStatesManagement
 {
