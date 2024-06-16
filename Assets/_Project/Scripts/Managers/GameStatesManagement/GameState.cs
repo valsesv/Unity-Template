@@ -2,6 +2,7 @@
 {
     public enum GameState
     {
+        None,
         Boot,
         Menu,
         Game,

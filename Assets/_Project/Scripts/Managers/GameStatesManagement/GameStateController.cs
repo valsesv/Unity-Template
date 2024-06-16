@@ -1,11 +1,16 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using valsesv._Project.Scripts.Interfaces;
+using valsesv._Project.Scripts.Managers.ScenesManagement;
+using Zenject;
 
 namespace valsesv._Project.Scripts.Managers.GameStatesManagement
 {
     public class GameStateController : MonoBehaviour, IManager
     {
+        [SerializeField] private SceneController sceneController;
+
         private GameState _state;
 
         public event Action<GameState> OnStateChangedEvent;
@@ -43,6 +48,9 @@ namespace valsesv._Project.Scripts.Managers.GameStatesManagement
                         TryLose();
                         break;
                     case GameState.Boot:
+                        LoadBootScene();
+                        break;
+                    case GameState.None:
                     default:
                         throw new ArgumentOutOfRangeException(nameof(value), value, null);
                 }
@@ -53,6 +61,7 @@ namespace valsesv._Project.Scripts.Managers.GameStatesManagement
 
         public void Init()
         {
+
         }
 
         public void SetState(GameState gameState)
@@ -60,8 +69,14 @@ namespace valsesv._Project.Scripts.Managers.GameStatesManagement
             State = gameState;
         }
 
+        private void LoadBootScene()
+        {
+            SetState(GameState.Menu);
+        }
+
         private void SetMenuState()
         {
+            sceneController.LoadScene(SceneType.Menu);
             IsPlaying = false;
             OnMenuStateEvent?.Invoke();
         }

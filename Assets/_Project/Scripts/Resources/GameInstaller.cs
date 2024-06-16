@@ -1,6 +1,7 @@
 using UnityEngine;
 using valsesv._Project.Scripts.Managers.GameStatesManagement;
 using valsesv._Project.Scripts.Managers.ScenesManagement;
+using valsesv._Project.Scripts.Managers.SoundManagement;
 using valsesv._Project.Scripts.UI;
 using Zenject;
 
@@ -10,6 +11,9 @@ namespace valsesv._Project.Scripts.Resources
     {
         [SerializeField] private GameStateController gameStateController;
         [SerializeField] private SceneController sceneController;
+        [Space(10)]
+        [SerializeField] private SoundManager soundManager;
+        [SerializeField] private MusicManager musicManager;
         [Space(10)]
         [SerializeField] private UiProjectManager gameUiProjectManager;
 
@@ -27,6 +31,9 @@ namespace valsesv._Project.Scripts.Resources
             Container.Bind<UiProjectManager>().FromInstance(gameUiProjectManager).AsSingle();
 
             Container.Bind<GameStateController>().FromInstance(gameStateController).AsSingle();
+
+            Container.Bind<SoundManager>().FromInstance(soundManager).AsSingle();
+            Container.Bind<MusicManager>().FromInstance(musicManager).AsSingle();
         }
 
         private void InitManagers()
