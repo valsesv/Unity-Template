@@ -6,21 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e07c3e0a-0a62-42e3-ad87-cd8163542789" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.template/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/UI/Loading Screen/Loading Screen Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/UI/Loading Screen/Loading Screen Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameStatesManagement/Bootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameStatesManagement/Bootstrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameStatesManagement/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameStatesManagement/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameStatesManagement/GameStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameStatesManagement/GameStateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/MoneyManagement/MoneyWallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/MoneyManagement/MoneyWallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SaveManagement/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SaveManagement/SaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/GameInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/ProjectContext.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sounds/Audio/Clicks/SFX_Click_Punch.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sounds/Audio/Clicks/SFX_Click_Punch.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sounds/Audio/Clicks/SFX_Click_Whoosh.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sounds/Audio/Clicks/SFX_Click_Whoosh.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sounds/Audio/Music.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sounds/Audio/Music/SFX_MusicSample.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sounds/Audio/Music/SFX_MusicSample.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +96,7 @@
       <workItem from="1718121181530" duration="2984000" />
       <workItem from="1718566394375" duration="2148000" />
       <workItem from="1718571305843" duration="70000" />
+      <workItem from="1718571410202" duration="4076000" />
     </task>
     <servers />
   </component>

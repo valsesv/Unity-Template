@@ -4,6 +4,8 @@ using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 using valsesv._Project.Scripts.Interfaces;
+using valsesv._Project.Scripts.Managers.MoneyManagement;
+using Zenject;
 
 namespace valsesv._Project.Scripts.Managers.SaveManagement
 {
@@ -13,6 +15,7 @@ namespace valsesv._Project.Scripts.Managers.SaveManagement
 
         private string _progressDataSavePath;
 
+        [Inject] private MoneyWallet _moneyWallet;
 
         public void Init()
         {
@@ -52,7 +55,7 @@ namespace valsesv._Project.Scripts.Managers.SaveManagement
             {
                 ProgressData = new SaveData
                 {
-                    //moneyCount = _moneyWallet.MoneyCount
+                    moneyCount = _moneyWallet.MoneyCount
                 };
                 return;
             }

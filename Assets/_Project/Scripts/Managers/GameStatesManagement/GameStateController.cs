@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 using valsesv._Project.Scripts.Interfaces;
 using valsesv._Project.Scripts.Managers.ScenesManagement;
 using Zenject;
@@ -9,9 +8,9 @@ namespace valsesv._Project.Scripts.Managers.GameStatesManagement
 {
     public class GameStateController : MonoBehaviour, IManager
     {
-        [SerializeField] private SceneController sceneController;
-
         private GameState _state;
+
+        [Inject] private SceneController _sceneController;
 
         public event Action<GameState> OnStateChangedEvent;
 
@@ -59,10 +58,7 @@ namespace valsesv._Project.Scripts.Managers.GameStatesManagement
             }
         }
 
-        public void Init()
-        {
-
-        }
+        public void Init(){ }
 
         public void SetState(GameState gameState)
         {
@@ -76,7 +72,7 @@ namespace valsesv._Project.Scripts.Managers.GameStatesManagement
 
         private void SetMenuState()
         {
-            sceneController.LoadScene(SceneType.Menu);
+            _sceneController.LoadScene(SceneType.Menu);
             IsPlaying = false;
             OnMenuStateEvent?.Invoke();
         }
