@@ -38,6 +38,9 @@ namespace valsesv._Project.Scripts.Resources
             saveManager.Init();
             // money init should be after saveManager, cause it's taking value from save
             moneyWallet.Init();
+
+            soundManager.Init();
+            musicManager.Init();
         }
 
         private void BindManagers()

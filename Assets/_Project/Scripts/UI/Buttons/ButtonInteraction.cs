@@ -12,6 +12,8 @@ namespace valsesv._Project.Scripts.UI.Buttons
         [SerializeField] private Button button;
         [SerializeField] private AudioClip buttonSound;
         [SerializeField] private AudioClip hoverSound;
+        [Space(10)]
+        [SerializeField] private ButtonInteractionEffectType effectType;
         [SerializeField] private bool hoverEffect;
         [SerializeField, ShowIf(nameof(hoverEffect))]
         private GameObject hoverImage;
@@ -20,7 +22,7 @@ namespace valsesv._Project.Scripts.UI.Buttons
 
         private void Start()
         {
-            button.onClick.AddListener(PlayClickSound);
+            button.onClick.AddListener(PlayButtonEffects);
             EnableHoverImage(false);
         }
 
@@ -44,9 +46,10 @@ namespace valsesv._Project.Scripts.UI.Buttons
             EnableHoverImage(false);
         }
 
-        private void PlayClickSound()
+        private void PlayButtonEffects()
         {
             _soundManager.PlaySound(buttonSound);
+            ButtonAnimations.PlayAnimation(effectType, transform);
         }
 
         private void TryPlayHoverSound()
