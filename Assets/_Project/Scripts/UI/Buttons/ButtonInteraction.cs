@@ -21,12 +21,7 @@ namespace valsesv._Project.Scripts.UI.Buttons
         private void Start()
         {
             button.onClick.AddListener(PlayClickSound);
-            hoverImage.gameObject.SetActive(false);
-        }
-
-        private void PlayClickSound()
-        {
-            _soundManager.PlaySound(buttonSound);
+            EnableHoverImage(false);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -36,11 +31,8 @@ namespace valsesv._Project.Scripts.UI.Buttons
                 return;
             }
 
-            if (hoverSound)
-            {
-                _soundManager.PlaySound(hoverSound);
-            }
-            hoverImage.gameObject.SetActive(true);
+            TryPlayHoverSound();
+            EnableHoverImage(true);
         }
 
         public void OnPointerExit(PointerEventData eventData)
@@ -49,7 +41,25 @@ namespace valsesv._Project.Scripts.UI.Buttons
             {
                 return;
             }
-            hoverImage.gameObject.SetActive(false);
+            EnableHoverImage(false);
+        }
+
+        private void PlayClickSound()
+        {
+            _soundManager.PlaySound(buttonSound);
+        }
+
+        private void TryPlayHoverSound()
+        {
+            if (hoverSound)
+            {
+                _soundManager.PlaySound(hoverSound);
+            }
+        }
+
+        private void EnableHoverImage(bool isEnabled)
+        {
+            hoverImage.gameObject.SetActive(isEnabled);
         }
     }
 }

@@ -5,9 +5,6 @@ namespace valsesv._Project.Scripts.UI
 {
     public class UiProjectManager : MonoBehaviour, IManager
     {
-        public void Init()
-        {
-
-        }
+        public void Init(){}
     }
 }

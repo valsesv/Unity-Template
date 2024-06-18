@@ -100,6 +100,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7794301377045731801}
   m_SourcePrefab: {fileID: 100100000, guid: ba289432ccddd4004ad9bf752665612f, type: 3}
+--- !u!225 &4902370563162224550 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 9118781626987334469, guid: ba289432ccddd4004ad9bf752665612f, type: 3}
+  m_PrefabInstance: {fileID: 4216727827395771619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4942433291528982128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9084850589787730579, guid: ba289432ccddd4004ad9bf752665612f, type: 3}
@@ -117,3 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680e310965e24b56bd1607406a25be2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeButtons: []
+  canvasGroup: {fileID: 4902370563162224550}
+  hideOnAwake: 1
