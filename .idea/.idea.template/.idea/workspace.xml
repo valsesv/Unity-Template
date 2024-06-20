@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e07c3e0a-0a62-42e3-ad87-cd8163542789" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.template/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameConfiguration/ConfigKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/GameConfiguration/ConfigKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SoundManagement/AudioSourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SoundManagement/AudioSourceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SoundManagement/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SoundManagement/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SoundManagement/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Managers/SoundManagement/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Resources/ProjectContext.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/Buttons/ButtonInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/Buttons/ButtonInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/Buttons/ButtonInteractionEffectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/UI/Buttons/ButtonInteractionEffectType.cs" afterDir="false" />
-    </list>
+    <list default="true" id="e07c3e0a-0a62-42e3-ad87-cd8163542789" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +87,8 @@
       <workItem from="1718121181530" duration="2984000" />
       <workItem from="1718566394375" duration="2148000" />
       <workItem from="1718571305843" duration="70000" />
-      <workItem from="1718571410202" duration="11620000" />
+      <workItem from="1718571410202" duration="14013000" />
+      <workItem from="1718896794335" duration="607000" />
     </task>
     <servers />
   </component>

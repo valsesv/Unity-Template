@@ -39,17 +39,11 @@ namespace valsesv._Project.Scripts.UI.Buttons
 
         private static bool CanPlayTweenAnimation(Transform transform)
         {
-            if (_buttonTweens.ContainsKey(transform) == false)
+            if (_buttonTweens.TryGetValue(transform, out var tween))
             {
-                return false;
-            }
-            var animationTween = _buttonTweens[transform];
-            if (animationTween.IsActive())
-            {
-                return false;
+                tween.Kill();
             }
 
-            animationTween.Kill();
             return true;
         }
     }
