@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-namespace _Scripts.UI
+namespace valsesv._Project.Scripts.UI
 {
     public static class CanvasSwapper
     {

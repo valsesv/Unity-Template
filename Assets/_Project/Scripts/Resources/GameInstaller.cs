@@ -4,7 +4,7 @@ using valsesv._Project.Scripts.Managers.MoneyManagement;
 using valsesv._Project.Scripts.Managers.SaveManagement;
 using valsesv._Project.Scripts.Managers.ScenesManagement;
 using valsesv._Project.Scripts.Managers.SoundManagement;
-using valsesv._Project.Scripts.UI;
+using valsesv._Project.Scripts.UI.ProjectPanels;
 using Zenject;
 
 namespace valsesv._Project.Scripts.Resources
@@ -20,7 +20,7 @@ namespace valsesv._Project.Scripts.Resources
         [SerializeField] private SoundManager soundManager;
         [SerializeField] private MusicManager musicManager;
         [Space(10)]
-        [SerializeField] private UiProjectManager gameUiProjectManager;
+        [SerializeField] private ProjectPanelsManager gameUiProjectManager;
 
         private GameInstaller _gameInstaller;
 
@@ -52,7 +52,7 @@ namespace valsesv._Project.Scripts.Resources
 
             Container.Bind<GameStateController>().FromInstance(gameStateController).AsSingle();
             Container.Bind<SceneController>().FromInstance(sceneController).AsSingle();
-            Container.Bind<UiProjectManager>().FromInstance(gameUiProjectManager).AsSingle();
+            Container.Bind<ProjectPanelsManager>().FromInstance(gameUiProjectManager).AsSingle();
         }
 
         private void BindSound()

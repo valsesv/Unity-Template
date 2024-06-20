@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
-using _Scripts.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using valsesv._Project.Scripts.Interfaces;
+using valsesv._Project.Scripts.UI;
 
 namespace valsesv._Project.Scripts.Managers.ScenesManagement
 {
@@ -16,7 +16,7 @@ namespace valsesv._Project.Scripts.Managers.ScenesManagement
 
         public void Init()
         {
-            CanvasSwapper.CanvasGroupSwap(loadingScreen, false);
+            loadingScreen.alpha = 1f;
         }
 
         public async void LoadScene(SceneType sceneType)

@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using _Scripts.UI;
 using TMPro;
 using UnityEngine;
 
-namespace _Scripts.Helpers
+namespace valsesv._Project.Scripts.UI
 {
     public class PopUp : MonoBehaviour
     {
@@ -25,10 +24,10 @@ namespace _Scripts.Helpers
 
             if (_popUpCoroutine != null)
                 StopCoroutine(_popUpCoroutine);
-            
+
             _popUpCoroutine = StartCoroutine(HidePopUp());
         }
-    
+
         private IEnumerator HidePopUp()
         {
             yield return new WaitForSeconds(popUpDuration);
