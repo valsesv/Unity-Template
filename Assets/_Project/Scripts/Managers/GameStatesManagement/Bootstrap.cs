@@ -6,13 +6,13 @@ namespace valsesv._Project.Scripts.Managers.GameStatesManagement
 {
     public class Bootstrap : MonoBehaviour
     {
-        [Inject] private GameInstaller _gameInstaller;
-        [Inject] private GameStateController _gameStateController;
+        [Inject] private ProjectInstaller _projectInstaller;
+        [Inject] private ProjectStateController _projectStateController;
 
         private void Awake()
         {
-            _gameInstaller.InitManagers();
-            _gameStateController.SetState(GameState.Boot);
+            _projectInstaller.InitManagers();
+            _projectStateController.SetState(ProjectState.Boot);
         }
     }
 }

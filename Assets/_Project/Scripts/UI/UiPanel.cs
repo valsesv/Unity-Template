@@ -11,7 +11,6 @@ namespace valsesv._Project.Scripts.UI
         [SerializeField] private Button[] closeButtons;
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private bool hideOnAwake = true;
-        [SerializeField] private bool hidePreviousPanels = true;
 
         public event Action OnOpen;
         public event Action OnClosed;

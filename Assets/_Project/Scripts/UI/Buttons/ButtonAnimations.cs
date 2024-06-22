@@ -34,7 +34,7 @@ namespace valsesv._Project.Scripts.UI.Buttons
         private static void ScaleAnimation(Transform transform)
         {
             transform.localScale = Vector3.one * StartScale;
-            _buttonTweens[transform] = transform.DOScale(Vector3.one, AnimationDuration).SetEase(Ease.OutBounce);
+            _buttonTweens[transform] = transform.DOScale(Vector3.one, AnimationDuration).SetEase(Ease.OutBounce).SetUpdate(true);
         }
 
         private static bool CanPlayTweenAnimation(Transform transform)

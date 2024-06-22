@@ -1,12 +1,10 @@
 ﻿namespace valsesv._Project.Scripts.Managers.GameStatesManagement
 {
-    public enum GameState
+    public enum ProjectState
     {
         None,
         Boot,
         Menu,
-        Game,
-        Win,
-        Lose
+        Game
     }
 }
