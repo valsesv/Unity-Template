@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using valsesv._Project.Scripts.UI.GamePanels;
 using Zenject;

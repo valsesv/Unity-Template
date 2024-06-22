@@ -7,6 +7,9 @@ namespace valsesv._Project.Scripts.UI.ProjectPanels
     {
         [SerializeField] private ProjectPanelType projectPanelType;
         [SerializeField] private UiPanel[] panels;
+        [SerializeField] private ConfirmPanel confirmPanel;
+
+        public ConfirmPanel ConfirmPanel => confirmPanel;
 
         public void Init(){}
 
